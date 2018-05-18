@@ -6,6 +6,7 @@
 package com.deva.dao;
 
 import com.deva.model.User;
+import java.util.List;
 
 /**
  *
@@ -14,5 +15,6 @@ import com.deva.model.User;
 public interface UserDAO {
 
     public int addUser(User user);
+    public List<User> userList();
 
 }

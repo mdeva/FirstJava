@@ -7,6 +7,7 @@ package com.deva.controller;
 
 import com.deva.model.User;
 import com.deva.service.UserService;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.json.JsonObject;
@@ -60,11 +61,10 @@ public class HomeController {
 
         return "success";
     }
-    
-    @RequestMapping(value = "/success")
-    public String sucess() {
-        return "added";
-    }
 
+    @RequestMapping(value = "/success")
+    public String succ() {
+        return "index";
+    }
 
 }

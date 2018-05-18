@@ -20,7 +20,7 @@ function UserAction() {
         dataType: "text", //Expected data format from server
         success: function (response) { //On Successfull service call
             console.log(response);
-            	window.location.href = response;
+            window.location.href = response;
         }
         // When Service call fails
     });
@@ -46,6 +46,36 @@ function UserAction() {
      }
      });
      */
+
+}
+
+
+function getuserlist() {
+
+    var res;
+    $.ajax({
+        type: "GET",
+        url: 'http://localhost:8080/Curd/userList',
+        async: false,
+        dataType: "json", //Expected data format from server
+
+        success: function (response) {
+            console.log(response);
+            //debugger;
+            res = response;
+            for (var i = 0; i < res.length; i++) {
+                tr = $('<tr/>');
+                tr.append("<td>" + res[i].sno + "</td>");
+                tr.append("<td>" + res[i].name + "</td>");
+                tr.append("<td>" + res[i].address + "</td>");
+                $('table').append(tr);
+            }
+
+        },
+        error: function (response) {
+            console.log(response);
+        }
+    });
 
 }
 

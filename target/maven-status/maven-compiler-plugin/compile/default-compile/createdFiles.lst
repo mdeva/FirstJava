@@ -4,3 +4,4 @@ com/deva/dao/UserDAOImel.class
 com/deva/dao/UserDAO.class
 com/deva/service/UserService.class
 com/deva/service/UserServiceImel.class
+com/deva/controller/UserController.class

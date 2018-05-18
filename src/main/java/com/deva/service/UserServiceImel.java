@@ -7,6 +7,7 @@ package com.deva.service;
 
 import com.deva.dao.UserDAO;
 import com.deva.model.User;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,6 +27,12 @@ public class UserServiceImel implements UserService {
     public int adduser(User user) {
 
         return userDAO.addUser(user);
+    }
+
+    @Override
+    public List<User> userList() {
+        System.out.println("---- Service userList");
+      return userDAO.userList();
     }
 
 }
